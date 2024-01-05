@@ -1,15 +1,34 @@
 import 'dart:io';
 
 void main(){
-    stdout.write("Enter number::");
-    String n=(stdin.readLineSync()!);
-    int x=(n.split('').length);
-    final i1=n.split('');
+  stdout.write("enter a number:");
+  int x=int.parse(stdin.readLineSync()!);
 
-    for(int i=(x-1);i>=0;i--){
-      stdout.write(i1[i]);
-    }
-  
-  
-   
+  int val=check(x);
+
+  if(val==1){
+    print('prime');
+    
+  }else{
+    print('non-prime');
+  }
+}
+int check(int x){
+  int? flag;
+     for(int i=2;i<x;i++){
+         if(x%i==0){
+          flag=1;
+          break;
+         }
+         else{
+           flag=0;
+         }
+     }
+     if(flag==1){
+      return 0;
+     }
+     else{
+        return 1;
+     }
+
 }
