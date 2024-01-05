@@ -1,16 +1,16 @@
 import 'dart:io';
 
 void main(){
-    stdout.write("enter amount::");
-    int p=int.parse(stdin.readLineSync()!);
-    stdout.write("enter interest::");
-    double i=double.parse(stdin.readLineSync()!);
-    stdout.write("enter year::");
-    int y=int.parse(stdin.readLineSync()!);
+    stdout.write("enter a size of list::");
+    int size=int.parse(stdin.readLineSync()!);
 
-    print("interser is ${cal(p,i,y)}");
-}
+    List arr=new List.filled(size,0);
+    for(int i=0;i<arr.length;i++){
+       stdout.write("Arr[$i] = ");
+      arr[i]=int.parse(stdin.readLineSync()!);
+    }
 
-double? cal(int p,double i,int y){
-  return (((p*i*y)/100));
+    for(int i=0;i<arr.length;i++){
+      print(arr[i]);
+    }
 }
